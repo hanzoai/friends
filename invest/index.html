@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hanzo AI &middot; Friends and family round</title>
+<meta name="robots" content="noindex, nofollow">
+<script>try{var t=localStorage.getItem('hanzo:ff:theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<style>
+@font-face{font-family:Zen;src:url(zen.woff2) format("woff2-variations");
+  font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:"Zen Mono";src:url(zen-mono.woff2) format("woff2-variations");
+  font-weight:100 900;font-style:normal;font-display:swap}
+
+/* The deck's own palette, because this is where the deck sends a reader and a
+   page that changed colour on the way would read as a different company. The
+   switch is in the deck; this follows what it stored, and the machine when it
+   stored nothing. */
+:root{
+  --paper:#F6F6F3; --raise:rgba(255,255,255,.55); --line:rgba(16,17,16,.13);
+  --line2:rgba(16,17,16,.30); --ink:#101110; --soft:#4B4C47; --dim:#6D6E67; --hot:#B2371F;
+  --zen:Zen,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --mono:"Zen Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  color-scheme:light dark;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --paper:#141513; --raise:rgba(255,255,255,.05); --line:rgba(238,239,234,.13);
+  --line2:rgba(238,239,234,.30); --ink:#EEEFEA; --soft:#C3C4BD; --dim:#9C9D95; --hot:#E8674F } }
+:root[data-theme="dark"]{
+  --paper:#141513; --raise:rgba(255,255,255,.05); --line:rgba(238,239,234,.13);
+  --line2:rgba(238,239,234,.30); --ink:#EEEFEA; --soft:#C3C4BD; --dim:#9C9D95; --hot:#E8674F }
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--zen);
+  font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:1px solid var(--line2);outline-offset:2px}
+
+.sheet{max-width:600px;margin:0 auto;padding:64px 26px 100px}
+.mark{width:22px;height:22px;display:block;margin-bottom:38px;color:var(--ink)}
+h1{font-size:34px;font-weight:400;letter-spacing:-.025em;margin:0 0 14px;text-wrap:balance}
+.lede{color:var(--soft);margin:0 0 8px}
+.terms{font-family:var(--mono);font-size:11px;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--dim);margin:26px 0 0;padding-top:22px;border-top:1px solid var(--line)}
+
+form{margin-top:34px;display:flex;flex-direction:column;gap:20px}
+label{display:block}
+label span{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--dim);margin-bottom:7px}
+input,select{width:100%;background:var(--raise);border:1px solid var(--line);border-radius:6px;
+  padding:13px 14px;font-family:var(--zen);font-size:16px;color:var(--ink);
+  transition:border-color .2s ease}
+input:hover,select:hover{border-color:var(--line2)}
+input:focus,select:focus{border-color:var(--soft);outline:none}
+input::placeholder{color:var(--dim)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.note{font-size:13.5px;color:var(--dim);margin:0}
+
+.send{border:1px solid var(--ink);border-radius:6px;padding:15px 22px;background:var(--ink);
+  color:var(--paper);font-size:16px;transition:opacity .2s ease;margin-top:6px}
+.send:hover{opacity:.86}
+.send:disabled{opacity:.45;cursor:default}
+.back{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--dim);text-decoration:none;transition:color .2s ease}
+.back:hover{color:var(--ink)}
+.said{margin-top:22px;font-size:14.5px}
+.said.no{color:var(--hot)}
+
+.done h1{margin-bottom:18px}
+.done p{color:var(--soft)}
+@media(max-width:560px){ .sheet{padding:44px 20px 80px} h1{font-size:28px} .two{grid-template-columns:1fr} }
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<main class="sheet">
+  <svg class="mark" viewBox="0 0 67 67" fill="currentColor" aria-hidden="true"><path d="M22.21 67V44.6369H0V67H22.21Z"/><path d="M66.7038 22.3184H22.2534L0.0878906 44.6367H44.4634L66.7038 22.3184Z"/><path d="M22.21 0H0V22.3184H22.21V0Z"/><path d="M66.7198 0H44.5098V22.3184H66.7198V0Z"/><path d="M66.7198 67V44.6369H44.5098V67H66.7198Z"/></svg>
+
+  <div class="ask">
+    <h1>Yes, I want to invest.</h1>
+    <p class="lede">Tell us who is investing and how much. We generate your SAFE for online signature via <strong>Hanzo eSign</strong> (<a href="https://esign.hanzo.ai" target="_blank" rel="noopener" style="text-decoration:underline">esign.hanzo.ai</a>). Antje Worring countersigns for Hanzo AI.</p>
+
+    <form novalidate>
+      <label><span>Full legal name</span>
+        <input name="name" autocomplete="name" placeholder="As it should appear on the SAFE" required></label>
+
+      <label><span>Email</span>
+        <input name="email" type="email" autocomplete="email" placeholder="Where the SAFE is sent" required></label>
+
+      <label><span>Phone (optional)</span>
+        <input name="phone" type="tel" autocomplete="tel" placeholder="For SMS status updates via /v1/notify"></label>
+
+      <label><span>Street address</span>
+        <input name="street" autocomplete="street-address" required></label>
+
+      <div class="two">
+        <label><span>City</span><input name="city" autocomplete="address-level2" required></label>
+        <label><span>State or region</span><input name="region" autocomplete="address-level1"></label>
+      </div>
+      <div class="two">
+        <label><span>Postcode</span><input name="post" autocomplete="postal-code"></label>
+        <label><span>Country</span><input name="country" autocomplete="country-name" value="United States" required></label>
+      </div>
+
+      <label><span>Amount</span>
+        <input name="amount" inputmode="numeric" placeholder="$" required></label>
+      <p class="note">The round is $500,000 in total. Anything from $1,000 is welcome.</p>
+
+      <button class="send" type="submit">Send me the SAFE via Hanzo eSign</button>
+      <p class="said" hidden></p>
+    </form>
+
+    <p class="terms">Hanzo AI, Inc. &middot; Friends and family &middot; This is not an offer to
+      sell securities. Any investment is made only through the signed SAFE.</p>
+  </div>
+
+  <div class="done" hidden>
+    <h1>Thank you.</h1>
+    <p>Your details have been registered with <strong>Hanzo eSign</strong> (<a href="https://esign.hanzo.ai" target="_blank" rel="noopener" style="text-decoration:underline">esign.hanzo.ai</a>). The completed SAFE is being routed to
+      <b class="at"></b> for your cryptographic electronic signature.</p>
+    <div style="margin:26px 0">
+      <a class="send esign-btn" href="https://esign.hanzo.ai" target="_blank" rel="noopener" style="display:inline-block;text-decoration:none;text-align:center">Open Hanzo eSign &rarr;</a>
+    </div>
+    <p>Want to talk first? <a href="https://cal.hanzo.ai" target="_blank" rel="noopener">Book a call with the team</a>.</p>
+  </div>
+</main>
+
+<script>
+(function(){
+  'use strict';
+  var form=document.querySelector('form'), said=document.querySelector('.said');
+  var sendBtn=form.querySelector('.send');
+
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var d={}; new FormData(form).forEach(function(v,k){ d[k]=String(v).trim(); });
+    var missing=['name','email','street','city','country','amount'].filter(function(k){ return !d[k]; });
+    if(missing.length) return tell('Still needed: '+missing.join(', ')+'.', true);
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(d.email)) return tell('That email address looks wrong.', true);
+
+    sendBtn.disabled=true;
+    sendBtn.textContent='Routing to Hanzo eSign...';
+
+    // Dispatch investment and SAFE signing request to Hanzo eSign
+    var payload={
+      service: 'esign',
+      template: 'safe-friends-family',
+      round: 'Friends & Family',
+      name: d.name,
+      email: d.email,
+      phone: d.phone || undefined,
+      amount: d.amount,
+      address: [d.street,d.city,d.region,d.post,d.country].filter(Boolean).join(', '),
+      submittedAt: new Date().toISOString()
+    };
+
+    // Pre-fill parameters for direct signing on esign.hanzo.ai
+    var hash = '';
+    try {
+      var embedData = {
+        name: d.name,
+        email: d.email,
+        lockName: true,
+        lockEmail: true
+      };
+      hash = btoa(encodeURIComponent(JSON.stringify(embedData)));
+      var esignLink = document.querySelector('.esign-btn');
+      if(esignLink) {
+        esignLink.href = 'https://esign.hanzo.ai/d/friends#' + hash;
+      }
+    } catch(err) {}
+
+    // Transmit intake event to Hanzo eSign & Notify native endpoints
+    var sendPost = function(url, bodyObj){
+      try {
+        var str = JSON.stringify(bodyObj);
+        if(navigator.sendBeacon){
+          navigator.sendBeacon(url, new Blob([str], {type: 'application/json'}));
+        } else {
+          fetch(url, { method: 'POST', mode: 'no-cors', headers: {'Content-Type':'application/json'}, body: str });
+        }
+      } catch(_) {}
+    };
+
+    // 1. Ingest to Hanzo eSign
+    sendPost('https://api.hanzo.ai/v1/esign/intake', payload);
+    sendPost('https://esign.hanzo.ai/api/webhook/trigger', payload);
+
+    // 2. Dispatch email confirmation via native /v1/notify
+    sendPost('https://api.hanzo.ai/v1/notify/send/email?sync=true', {
+      channel: 'email',
+      sync: 'true',
+      to: d.email,
+      subject: 'Your Hanzo AI Friends & Family SAFE',
+      body: 'Hi ' + d.name + ',\n\nYour SAFE for $' + d.amount + ' in Hanzo AI has been generated.\n\nPlease review and sign your SAFE here:\nhttps://esign.hanzo.ai/d/friends#' + hash + '\n\nHanzo AI Team'
+    });
+
+    // 3. Dispatch optional SMS alert via native /v1/notify if phone provided
+    if(d.phone){
+      sendPost('https://api.hanzo.ai/v1/notify/send/sms?sync=true', {
+        channel: 'sms',
+        sync: 'true',
+        to: d.phone,
+        body: 'Hanzo AI: Your SAFE for $' + d.amount + ' is ready to sign: https://esign.hanzo.ai/d/friends#' + hash
+      });
+    }
+
+    // 4. Notify team internally via /v1/notify
+    sendPost('https://api.hanzo.ai/v1/notify/send/email?sync=true', {
+      channel: 'email',
+      sync: 'true',
+      to: 'a@hanzo.ai',
+      subject: 'New F&F Investment: $' + d.amount + ' from ' + d.name,
+      body: 'New SAFE investment registered:\n\nInvestor: ' + d.name + ' <' + d.email + '>\nAmount: $' + d.amount + '\nPhone: ' + (d.phone || 'N/A') + '\nAddress: ' + [d.street,d.city,d.region,d.post,d.country].filter(Boolean).join(', ')
+    });
+
+    document.querySelector('.at').textContent=d.email;
+    document.querySelector('.ask').hidden=true;
+    document.querySelector('.done').hidden=false;
+    scrollTo(0,0);
+  });
+
+  function tell(what, bad){
+    said.hidden=false; said.textContent=what; said.classList.toggle('no', !!bad);
+  }
+})();
+</script>
+</body>
+</html>
